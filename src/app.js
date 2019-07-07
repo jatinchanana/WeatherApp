@@ -4,7 +4,7 @@ const app = express()
 const hbs = require('hbs')
 const geocode = require('../src/utils/geocode')
 const forecast = require('../src/utils/forecast')
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 //setup handlebars and views directory
 app.set('view engine','hbs')
 app.set('views',path.join(__dirname,'../templates/views'))
