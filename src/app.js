@@ -4,6 +4,7 @@ const app = express()
 const hbs = require('hbs')
 const geocode = require('../src/utils/geocode')
 const forecast = require('../src/utils/forecast')
+const port = process.env.port || 3000
 //setup handlebars and views directory
 app.set('view engine','hbs')
 app.set('views',path.join(__dirname,'../templates/views'))
@@ -82,7 +83,7 @@ app.get('/*',(req,res)=>{
         name:'Jatin Chanana'
 })
 })
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port,()=>{
+    console.log('Server is up on port '+port)
 })
 
